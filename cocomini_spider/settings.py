@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = False
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     #注:这里是越小越有限
-    'scrapy_redis.pipelines.RedisPipeline': 300,
+    # 'scrapy_redis.pipelines.RedisPipeline': 300,
     'cocomini_spider.pipelines.NovelPipeline': 301,
     'cocomini_spider.pipelines.ChapterPipeline': 302
 }
@@ -97,6 +97,6 @@ ITEM_PIPELINES = {
 MYSQL_URL = "localhost"
 MYSQL_DB = "cocomini"
 
-SCHEDULER = "scrapy_redis.scheduler.Scheduler"#把核心调度器替换为scrapy-redis
-DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"#去重的class替换为scrapy-redis
-REDIS_URL = 'redis://@101.132.110.217:6379'
+# SCHEDULER = "scrapy_redis.scheduler.Scheduler"#把核心调度器替换为scrapy-redis
+# DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"#去重的class替换为scrapy-redis
+# REDIS_URL = 'redis://@101.132.110.217:6379'
